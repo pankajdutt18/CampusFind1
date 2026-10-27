@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <meta name="description"
+        content="CampusFind helps students report lost belongings and find items discovered around campus.">
+
+    <title>CampusFind | Campus Lost & Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement">
+        <span class="status-dot"></span>
+        Your campus community, looking out for each other
+        <span class="beta-tag">BETA</span>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <a href="#" class="brand">
+            <span class="brand-icon">⌕</span>
+            <span class="brand-text">
+                campus<span>find</span>
+                <small>LOST & FOUND</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="navigation" id="navigation">
+            <a href="#discover" class="nav-link active">Discover</a>
+            <a href="#how-it-works" class="nav-link">How it works</a>
+            <a href="#safety" class="nav-link">Safety tips</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="text-button" id="signInButton">Sign in</button>
+            <button class="button button-dark" data-open-report>＋ Report an item</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero container">
+
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span>✳</span> MADE FOR CAMPUS LIFE
+                </div>
+
+                <h1>
+                    Lost something?<br>
+                    <span>Let's bring it home.</span>
+                </h1>
+
+                <p class="hero-description">
+                    The campus-wide place to report lost belongings,
+                    discover found items, and help good things make
+                    their way back to their owners.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="button button-primary" data-open-report>
+                        ＋ Report a lost item
+                    </button>
+
+                    <a href="#discover" class="button button-light">
+                        Browse found items <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="trust-row">
+                    <div class="avatar-stack">
+                        <span>AK</span>
+                        <span>RS</span>
+                        <span>PM</span>
+                        <span>+</span>
+                    </div>
+
+                    <div>
+                        <strong>A little help goes a long way.</strong>
+                        <small>Built for students, by the campus community.</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative illustration -->
+            <div class="hero-art">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="floating-card note-top">
+                    <span class="note-icon">✓</span>
+                    <div>
+                        <strong>Found it!</strong>
+                        <small>Water bottle · Library</small>
+                    </div>
+                </div>
+
+                <div class="illustration laptop">
+                    <div class="laptop-screen">
+                        <div class="screen-circle"></div>
+                        <div class="screen-line"></div>
+                        <div class="screen-line short"></div>
+                        <span class="screen-sticker">CF</span>
+                    </div>
+                    <div class="laptop-base"></div>
+                </div>
+
+                <div class="illustration bottle">
+                    <div class="bottle-cap"></div>
+                    <div class="bottle-body">
+                        <span>STAY<br>CURIOUS</span>
+                        <b>✳</b>
+                    </div>
+                </div>
+
+                <div class="illustration notebook">
+                    <div class="notebook-label">
+                        IDEAS<br>
+                        <strong>IN PROGRESS</strong>
+                        <span>✦</span>
+                    </div>
+                </div>
+
+                <div class="illustration keys">
+                    <span class="key-ring"></span>
+                    <span class="key-stem"></span>
+                    <span class="key-tag">HOME</span>
+                </div>
+
+                <span class="spark spark-one">✦</span>
+                <span class="spark spark-two">✳</span>
+                <span class="spark spark-three">✧</span>
+
+                <div class="floating-card note-bottom">
+                    <span class="note-icon purple">⌖</span>
+                    <div>
+                        <strong>Last seen nearby?</strong>
+                        <small>Search by location or category</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bottomline">
+                <span>01 / FIND WHAT'S MISSING</span>
+                <div></div>
+                <span>GOOD PEOPLE. FOUND THINGS.</span>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="stats container">
+            <div class="stat">
+                <span class="stat-icon lavender">⌕</span>
+                <div>
+                    <strong>One simple place</strong>
+                    <small>Browse reports across campus</small>
+                </div>
+            </div>
+
+            <div class="stat">
+                <span class="stat-icon mint">↗</span>
+                <div>
+                    <strong>Community-powered</strong>
+                    <small>Every report brings us closer</small>
+                </div>
+            </div>
+
+            <div class="stat">
+                <span class="stat-icon peach">♡</span>
+                <div>
+                    <strong>Safer reunions</strong>
+                    <small>Verify ownership before pickup</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discover Items -->
+        <section class="discover container" id="discover">
+
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">THE COMMUNITY BOARD</div>
+                    <h2>Recently <span>spotted.</span></h2>
+                    <p>A little scroll might be all it takes to find your missing thing.</p>
+                </div>
+
+                <button class="button button-outline" data-open-report>
+                    ＋ Post a report
+                </button>
+            </div>
+
+            <!-- Search -->
+            <div class="search-panel">
+                <label class="search-box">
+                    <span class="search-icon">⌕</span>
+                    <input type="search" id="searchInput" placeholder="Search items, places, or keywords..."
+                        aria-label="Search lost and found items">
+                    <kbd>↵</kbd>
+                </label>
+
+                <div class="filter-row" id="filterRow">
+                    <button class="filter-chip selected" data-filter="All">
+                        All items <span id="itemCount">8</span>
+                    </button>
+                    <button class="filter-chip" data-filter="Electronics">⌁ Electronics</button>
+                    <button class="filter-chip" data-filter="ID & Cards">▤ ID & Cards</button>
+                    <button class="filter-chip" data-filter="Bags & Books">▣ Bags & Books</button>
+                    <button class="filter-chip" data-filter="Personal">✳ Personal</button>
+
+                    <label class="sort-control">
+                        Sort:
+                        <select id="sortSelect" aria-label="Sort listings">
+                            <option value="recent">Most recent</option>
+                            <option value="oldest">Oldest first</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="results-meta">
+                <span id="resultsCount">Showing 8 community reports</span>
+                <span class="sample-label"><span></span> Sample listings</span>
+            </div>
+
+            <!-- JavaScript creates the item cards here -->
+            <div class="item-grid" id="itemGrid" aria-live="polite"></div>
+
+            <div class="empty-state hidden" id="emptyState">
+                <div class="empty-icon">⌕</div>
+                <h3>No matching items yet</h3>
+                <p>Try another search or post a report to help the community.</p>
+                <button class="button button-primary" data-open-report>
+                    Report an item
+                </button>
+            </div>
+
+            <div class="center-button">
+                <button class="button button-light" id="showAllButton">
+                    Show all items ↓
+                </button>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="how-section" id="how-it-works">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">A FEW SIMPLE STEPS</div>
+                        <h2>From lost to <span>found.</span></h2>
+                        <p>A little information can make a big difference.</p>
+                    </div>
+                </div>
+
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <div class="step-icon lavender">↗</div>
+                        <h3>Post a report</h3>
+                        <p>
+                            Share what went missing or what you found.
+                            Add a clear description and the last-seen location.
+                        </p>
+                        <span class="step-footer">TAKES ABOUT 1 MIN</span>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <div class="step-icon mint">⌕</div>
+                        <h3>Discover a match</h3>
+                        <p>
+                            Search reports by item, category, or campus
+                            location. Keep an eye on new listings.
+                        </p>
+                        <span class="step-footer">SEARCH THE BOARD</span>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <div class="step-icon peach">♡</div>
+                        <h3>Reconnect safely</h3>
+                        <p>
+                            Verify ownership and arrange collection at
+                            a staffed campus desk or another public place.
+                        </p>
+                        <span class="step-footer">MEET ON CAMPUS</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety -->
+        <section class="safety-section container" id="safety">
+            <div class="safety-card">
+
+                <div class="safety-art">
+                    <div class="safety-orbit"></div>
+                    <div class="shield">✓</div>
+                    <span class="safety-spark spark-a">✦</span>
+                    <span class="safety-spark spark-b">✳</span>
+                </div>
+
+                <div class="safety-content">
+                    <div class="eyebrow">A QUICK NOTE ON SAFETY</div>
+
+                    <h2>
+                        Good finds.<br>
+                        <span>Safe handovers.</span>
+                    </h2>
+
+                    <p>
+                        CampusFind is a community board, not an identity
+                        verification service. A few smart steps can help
+                        protect you and your belongings.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <span>✓</span>
+                            Keep student IDs, phone numbers, and private
+                            details out of public descriptions.
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Ask the claimant to describe a hidden detail
+                            before handing over an item.
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Arrange collection at a staffed campus desk
+                            or another public place.
+                        </li>
+                    </ul>
+
+                    <a href="#footer" class="safety-link">
+                        Read our community guidelines ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="closing-cta">
+            <div class="cta-decoration">✳　✦　✧　✳　✦</div>
+            <div class="eyebrow">IT TAKES A CAMPUS</div>
+
+            <h2>
+                Someone can help.<br>
+                <span>It could be you.</span>
+            </h2>
+
+            <p>
+                Report what you've lost. Share what you've found.
+                Make campus life a little kinder.
+            </p>
+
+            <button class="button button-white" data-open-report>
+                ＋ Make a report
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-top">
+            <a href="#" class="brand">
+                <span class="brand-icon">⌕</span>
+                <span class="brand-text">
+                    campus<span>find</span>
+                    <small>LOST & FOUND</small>
+                </span>
+            </a>
+
+            <p>A little less lost. A little more together.</p>
+
+            <div class="footer-links">
+                <a href="#discover">Browse items</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#safety">Safety</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 CampusFind · Student community concept</span>
+            <span>Designed with care for campus life <b>♥</b></span>
+        </div>
+    </footer>
+
+    <!-- Report Modal -->
+    <div class="modal-backdrop hidden" id="reportModal">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+            <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+
+            <div id="reportFormSection">
+                <div class="eyebrow">HELP THE COMMUNITY</div>
+                <h2 id="modalTitle">Make a report.</h2>
+                <p class="modal-intro">
+                    Tell us a little about the item. Fields marked * are required.
+                </p>
+
+                <form id="reportForm">
+                    <div class="form-row">
+                        <label>
+                            I'm reporting a <span>*</span>
+                            <select id="reportType" required>
+                                <option value="Lost">Lost item</option>
+                                <option value="Found">Found item</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Category <span>*</span>
+                            <select id="reportCategory" required>
+                                <option value="Electronics">Electronics</option>
+                                <option value="ID & Cards">ID & Cards</option>
+                                <option value="Bags & Books">Bags & Books</option>
+                                <option value="Personal">Personal items</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label>
+                        Item name <span>*</span>
+                        <input type="text" id="itemName" maxlength="70" placeholder="e.g. Blue water bottle" required>
+                    </label>
+
+                    <label>
+                        Location <span>*</span>
+                        <input type="text" id="itemLocation" maxlength="90"
+                            placeholder="e.g. Central Library, second floor" required>
+                    </label>
+
+                    <label>
+                        Description <span>*</span>
+                        <textarea id="itemDescription" maxlength="350" rows="3"
+                            placeholder="Colour, brand, or distinguishing details..." required></textarea>
+                    </label>
+
+                    <label>
+                        Date lost or found <span>*</span>
+                        <input type="date" id="itemDate" required>
+                    </label>
+
+                    <div class="privacy-note">
+                        🔒
+                        <span>
+                            Don't include phone numbers, passwords, full
+                            student IDs, or other sensitive details in
+                            public descriptions.
+                        </span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="button button-light" id="cancelModal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="button button-primary">
+                            Publish report ↗
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="success-message hidden" id="successMessage">
+                <div class="success-check">✓</div>
+                <h3>Your report has been added!</h3>
+                <p>
+                    This demo keeps reports in the current browser session.
+                    A backend is needed to share reports between students.
+                </p>
+                <button class="button button-primary" id="successDone">
+                    Back to listings
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="toast hidden" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
